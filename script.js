@@ -63,6 +63,7 @@ function onCloseModalByClick(event) {
 function onCloseModalByEscape(event) {
   if (event.key === 'Escape') {
     onCloseModalByClick(event);
+    document.removeEventListener('keydown', onCloseModalByEscape);
   }
 }
 
